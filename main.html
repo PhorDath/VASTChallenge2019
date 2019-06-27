@@ -1,62 +1,33 @@
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8">
-        <title>Danos</title>
+        <title>Challenge Selection</title>
         <link href="style.css" rel="stylesheet" type="text/css">
         <style>
         
         </style>
     </head>
     <body>
-        <select onchange="changeNeighborhood(value)">
-            <option value="0">Select a region</option>
-            <option value="1">Region 1</option>
-            <option value="2">Region 2</option>
-            <option value="3">Region 3</option>
-            <option value="4">Region 4</option>
-        </select>
-        <button type="button" onclick="callLineGraph()">
-            Visualize!
-        </button>
-
-        <div>
-
+        <div class="content">
+            <button type="button" onclick="mc1()">
+                Mini challenge 1
+            </button>
+            <button type="button" onclick="mc2()">
+                Mini challenge 2
+            </button>            
         </div>
-
-
+        
     </body>
 
     <script src="http://d3js.org/d3.v3.js"></script>
-    <script src="graphs.js"></script>
+
     <script>
-        function changeNeighborhood(v){
-            neighborhood = v;
-            console.log(neighborhood);
+        function mc1(){
+            window.open("mc1.html");
         }
-
-        function callLineGraph(){
-            if(neighborhood >= 1 && neighborhood <= 19 && graphDisp == false){
-                lineGraph("c"+neighborhood+".csv");
-                graphDisp = true;
-            }
-            else if(neighborhood >= 1 && neighborhood <= 19 && graphDisp == true){ // must destroy current graph before displaying another
-                // remove current graph
-                if(graphDisp == true){
-                    //var elem = document.querySelector("")
-                    d3.select("svg").remove();
-                }
-                lineGraph("c"+neighborhood+".csv");
-                graphDisp = true;
-            }     
+        function mc2(){
+            window.open("mc2.html");
         }
-
-        var neighborhood = 0;
-        var graphDisp = false;
-
-
-
-
-        
     </script>
     
 </html>

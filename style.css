@@ -61,6 +61,7 @@ body {
     neighborhood menu
 */
 
-datalist { 
-    display: none;
-  }
+.content {
+    max-width: 600px;
+    margin: auto;
+}
